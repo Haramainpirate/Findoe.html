@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Findoe Electronics Products</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      margin: 0; padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #007bff;
+    }
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 22px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .product-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .product-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgb(0 0 0 / 0.15);
+    }
+    .product-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+    .product-name {
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      min-height: 48px; /* Uniform product title height */
+    }
+    .product-price {
+      color: #28a745;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .quantity-label {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+    .quantity-input {
+      width: 50px;
+      padding: 5px;
+      font-size: 1rem;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
+    button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 480px) {
+      .product-item img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Findoe Electronics Products</h1>
+  <div class="product-container">
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Smartphone" alt="Smartphone" />
+      <div class="product-name">Smartphone Model A</div>
+      <div class="product-price">$499.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Laptop" alt="Laptop" />
+      <div class="product-name">Laptop Model B</div>
+      <div class="product-price">$899.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Tablet" alt="Tablet" />
+      <div class="product-name">Tablet Model C</div>
+      <div class="product-price">$299.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Smart+Watch" alt="Smart Watch" />
+      <div class="product-name">Smart Watch D</div>
+      <div class="product-price">$199.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Bluetooth+Speaker" alt="Bluetooth Speaker" />
+      <div class="product-name">Bluetooth Speaker E</div>
+      <div class="product-price">$149.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Headphones" alt="Headphones" />
+      <div class="product-name">Wireless Headphones F</div>
+      <div class="product-price">$89.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Camera" alt="Camera" />
+      <div class="product-name">Digital Camera G</div>
+      <div class="product-price">$549.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Printer" alt="Printer" />
+      <div class="product-name">Laser Printer H</div>
+      <div class="product-price">$299.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Router" alt="Router" />
+      <div class="product-name">WiFi Router I</div>
+      <div class="product-price">$79.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Monitor" alt="Monitor" />
+      <div class="product-name">4K Monitor J</div>
+      <div class="product-price">$399.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Keyboard" alt="Keyboard" />
+      <div class="product-name">Mechanical Keyboard K</div>
+      <div class="product-price">$129.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Mouse" alt="Mouse" />
+      <div class="product-name">Wireless Mouse L</div>
+      <div class="product-price">$59.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=External+Hard+Drive" alt="External Hard Drive" />
+      <div class="product-name">External Hard Drive M</div>
+      <div class="product-price">$109.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Smart+Home+Hub" alt="Smart Home Hub" />
+      <div class="product-name">Smart Home Hub N</div>
+      <div class="product-price">$149.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Drone" alt="Drone" />
+      <div class="product-name">Drone Model O</div>
+      <div class="product-price">$699.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=VR+Headset" alt="VR Headset" />
+      <div class="product-name">VR Headset P</div>
+      <div class="product-price">$399.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Projector" alt="Projector" />
+      <div class="product-name">Projector Q</div>
+      <div class="product-price">$549.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Electric+Kettle" alt="Electric Kettle" />
+      <div class="product-name">Electric Kettle R</div>
+      <div class="product-price">$49.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+     <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Smart+Thermostat" alt="Smart Thermostat" />
+      <div class="product-name">Smart Thermostat S</div>
+      <div class="product-price">$249.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+     <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+      <img src="https://via.placeholder.com/150?text=Gaming+Console" alt="Gaming Console" />
+      <div class="product-name">Gaming Console T</div>
+      <div class="product-price">$499.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+     <button>Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>

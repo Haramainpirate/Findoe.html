@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salon Cutting Styles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6f0;
+      margin: 20px;
+      color: #3a2f2f;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #b76e79;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #936060;
+    }
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .service-item {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(183, 110, 121, 0.15);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .service-item:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 25px rgba(183, 110, 121, 0.25);
+    }
+    .service-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 4px solid #b76e79;
+    }
+    .service-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 20px 15px 8px;
+      color: #95555c;
+      flex-grow: 1;
+    }
+    .service-description {
+      font-size: 0.9rem;
+      color: #77504f;
+      margin: 0 15px 15px;
+      min-height: 48px;
+    }
+    .service-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #b76e79;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Salon Cutting Styles & Prices</h1>
+  <p class="subtitle">Discover your perfect haircut style with us</p>
+</header>
+
+<ul class="service-list">
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Classic+Bob" alt="Classic Bob" class="service-img" />
+    <div class="service-name">Classic Bob</div>
+    <div class="service-description">Timeless bob cut with clean edges and smooth finish.</div>
+    <div class="service-price">$30</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Layered+Cut" alt="Layered Cut" class="service-img" />
+    <div class="service-name">Layered Cut</div>
+    <div class="service-description">Soft layers to add volume and movement to your hair.</div>
+    <div class="service-price">$40</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Pixie+Cut" alt="Pixie Cut" class="service-img" />
+    <div class="service-name">Pixie Cut</div>
+    <div class="service-description">Short, chic pixie style with textured finish.</div>
+    <div class="service-price">$35</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Undercut" alt="Undercut" class="service-img" />
+    <div class="service-name">Undercut</div>
+    <div class="service-description">Sharp undercut style with longer top layers.</div>
+    <div class="service-price">$45</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Fade+Cut" alt="Fade Cut" class="service-img" />
+    <div class="service-name">Fade Cut</div>
+    <div class="service-description">Smooth fade blending from short to longer hair.</div>
+    <div class="service-price">$38</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=French+Crop" alt="French Crop" class="service-img" />
+    <div class="service-name">French Crop</div>
+    <div class="service-description">Short crop with textured top and tapered sides.</div>
+    <div class="service-price">$37</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Shag+Cut" alt="Shag Cut" class="service-img" />
+    <div class="service-name">Shag Cut</div>
+    <div class="service-description">Layered and feathered for a tousled look.</div>
+    <div class="service-price">$42</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Buzz+Cut" alt="Buzz Cut" class="service-img" />
+    <div class="service-name">Buzz Cut</div>
+    <div class="service-description">Even short hair all around, low maintenance.</div>
+    <div class="service-price">$25</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Slicked+Back" alt="Slicked Back" class="service-img" />
+    <div class="service-name">Slicked Back</div>
+    <div class="service-description">Classic slicked back style with a smooth finish.</div>
+    <div class="service-price">$40</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Mohawk" alt="Mohawk" class="service-img" />
+    <div class="service-name">Mohawk</div>
+    <div class="service-description">Bold cut with shaved sides and strip of longer hair.</div>
+    <div class="service-price">$50</div>
+  </li>
+
+  <!-- Continue adding 25+ more cutting styles similarly -->
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Afro" alt="Afro" class="service-img" />
+    <div class="service-name">Afro</div>
+    <div class="service-description">Full rounded style with natural curls.</div>
+    <div class="service-price">$45</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Asymmetrical+Cut" alt="Asymmetrical Cut" class="service-img" />
+    <div class="service-name">Asymmetrical Cut</div>
+    <div class="service-description">Uneven cut for edgy, modern look.</div>
+    <div class="service-price">$48</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Bob+with+Bangs" alt="Bob with Bangs" class="service-img" />
+    <div class="service-name">Bob with Bangs</div>
+    <div class="service-description">Classic bob enhanced with chic bangs.</div>
+    <div class="service-price">$38</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Curly+Cut" alt="Curly Cut" class="service-img" />
+    <div class="service-name">Curly Cut</div>
+    <div class="service-description">Layered cut designed for natural curls.</div>
+    <div class="service-price">$42</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Men's+Pompadour" alt="Men's Pompadour" class="service-img" />
+    <div class="service-name">Men's Pompadour</div>
+    <div class="service-description">Voluminous top styled back with short sides.</div>
+    <div class="service-price">$45</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Disconnected+Undercut" alt="Disconnected Undercut" class="service-img" />
+    <div class="service-name">Disconnected Undercut</div>
+    <div class="service-description">Sharp contrast between long top and shaved sides.</div>
+    <div class="service-price">$50</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Textured+Crop" alt="Textured Crop" class="service-img" />
+    <div class="service-name">Textured Crop</div>
+    <div class="service-description">Messy, textured hairstyle for modern look.</div>
+    <div class="service-price">$35</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Layered+Bob" alt="Layered Bob" class="service-img" />
+    <div class="service-name">Layered Bob</div>
+    <div class="service-description">Bob with soft, face-framing layers.</div>
+    <div class="service-price">$40</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Long+Layers" alt="Long Layers" class="service-img" />
+    <div class="service-name">Long Layers</div>
+    <div class="service-description">Length preserved with subtle layered shaping.</div>
+    <div class="service-price">$45</div>
+  </li>
+  <li class="service-item">
+    <img src="https://via.placeholder.com/250x160?text=Caesar+Cut" alt="Caesar Cut" class="service-img" />
+    <div class="service-name">Caesar Cut</div>
+    <div class="service-description">Short cut with a small fringe at the front.</div>
+    <div class="service-price">$32</div>
+  </li>
+
+  <!-- Add more up to 35+ items similarly -->
+
+</ul>
+
+</body>
+</html>

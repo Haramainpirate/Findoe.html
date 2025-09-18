@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findoe Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    nav {
+      background: #195190;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 18px;
+      height: 58px;
+      box-shadow: 0 2px 10px #19519020;
+    }
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 5px;
+      font-size: 1.05em;
+      font-weight: 600;
+      transition: background .16s, color .16s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: #437fb2;
+      color: #ffc75f;
+    }
+    .social-links {
+      display: flex;
+      gap: 8px;
+    }
+    .social-links a {
+      color: #fff;
+      font-size: 1.25em;
+      padding: 8px;
+      border-radius: 50%;
+      transition: background .17s, color .13s;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .social-links a:hover {
+      background: #ffc75f;
+      color: #195190;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 8px 0;
+      }
+      .nav-links, .social-links {
+        flex-direction: column;
+        gap: 2px;
+      }
+      .nav-links a, .social-links a {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .nav-links, .social-links {
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+  </style>
+  <nav>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Location</a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/results?search_query=ronaldo" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </nav>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d6774b;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .category {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            cursor: pointer;
+        }
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit:fill;
+            border-radius: 10px;
+        }
+        .category .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 0 0 5px black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Findoe Webpage</h1>
+    <div class="categories">
+        <div class="category">
+             <a href="Grocery.html">
+            <img src="Grocery.jpg" alt="Grocery">
+             </a>
+            <div class="text">Grocery</div>
+        </div>
+        <div class="category">
+            <a href="Electronics.html">
+            <img src="Electronics.jpg" alt="Electronics">
+            </a>
+            <div class="text">Electronics</div>
+        </div>
+        <div class="category">
+            <a href="index.html">
+            <img src="Fashion.jpg" alt="Fashion">
+            </a>
+            <div class="text">Fashion</div>
+        </div>
+        <div class="category">
+            <a href="Pharmacy.html">
+            <img src="Pharmacy.jpg" alt="Pharmacy">
+            </a>
+            <div class="text">Pharmacy</div>
+        </div>
+        <div class="category">
+            <a href="Bookshop.html">
+            <img src="Bookshop.jpg" alt="Bookstore">
+            </a>
+            <div class="text">Bookstore</div>
+        </div>
+        <div class="category">
+            <a href="Salon.html">
+            <img src="Salon.jpg" alt="Salon">
+            </a>
+            <div class="text">Salon</div>
+        </div>
+        <div class="category">
+            <a href="Hardware.html">
+            <img src="Hardware.jpg" alt="Hardware">
+            </a>
+            <div class="text">Hardware</div>
+        </div>
+        <div class="category">
+            <a href="Bakery.html">
+            <img src="Bakery.jpg" alt="Bakery">
+            </a>
+            <div class="text">Bakery</div>
+        </div>
+        <div class="category">
+            <a href="Hospital.html">
+            <img src="Hospital.jpg" alt="Hospital">
+            </a>
+            <div class="text">Hospital</div>
+        </div>
+        <div class="category">
+            <a href="Workshop.html">
+            <img src="Workshop.jpg" alt="Motor Workshop">
+            </a>
+            <div class="text">Motor Workshop</div>
+        </div>
+        <div class="category">
+            <a href="Hotels.html">
+            <img src="Hotels.jpg" alt="Hotels">
+            </a>
+            <div class="text">Hotels</div>
+        </div>
+        <div class="category">
+            <a href="Travels.html">
+            <img src="Travels.jpg" alt="Travels">
+            </a>
+            <div class="text">Travels</div>
+        </div>
+    </div>
+</body>
+</html>

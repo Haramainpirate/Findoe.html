@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grocery Items - Findoe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .grocery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .grocery-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .grocery-item:hover {
+      box-shadow: 0 6px 14px rgb(0 0 0 / 0.2);
+    }
+    .grocery-item img {
+      width: 100%;
+      height: 130px;
+      object-fit: contain;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 10px;
+    }
+    .item-name {
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+    .item-price {
+      color: #007b00;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .item-qty {
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .item-qty input {
+      width: 50px;
+      padding: 5px;
+      font-size: 1em;
+      text-align: center;
+    }
+    button {
+      background-color: #0284c7;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0369a1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Findoe Grocery Items</h1>
+  <div class="grocery-container">
+    <div class="grocery-item">
+      <img src="Apple.jpg" alt="Apples" />
+      <div class="item-name">Fresh Apples</div>
+      <div class="item-price">$3.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+    <div class="grocery-item">
+      <img src="Banana.jpg" alt="Bananas" />
+      <div class="item-name">Bananas</div>
+      <div class="item-price">$1.29 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+    <div class="grocery-item">
+      <img src="Carrot.jpg" alt="Carrots" />
+      <div class="item-name">Carrots</div>
+      <div class="item-price">$2.49 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Add more grocery items here -->
+    <div class="grocery-item">
+      <img src="Tomato.jpg" alt="Tomatoes" />
+      <div class="item-name">Tomatoes</div>
+      <div class="item-price">$2.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+    <div class="grocery-item">
+      <img src="onion.jpg" alt="Onions" />
+      <div class="item-name">Onions</div>
+      <div class="item-price">$1.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Pototo.jpg" alt="Potatoes" />
+      <div class="item-name">Potatoes</div>
+      <div class="item-price">$0.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="spinch.jpg" alt="Spinach" />
+      <div class="item-name">Spinach</div>
+      <div class="item-price">$2.25 / bunch</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Brocolie.jpg" alt="Broccoli" />
+      <div class="item-name">Broccoli</div>
+      <div class="item-price">$3.49 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Garlic.jpg" alt="Garlic" />
+      <div class="item-name">Garlic</div>
+      <div class="item-price">$4.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Ginger.jpg" alt="Ginger" />
+      <div class="item-name">Ginger</div>
+      <div class="item-price">$3.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="cucumber.jpg" alt="Cucumber" />
+      <div class="item-name">Cucumber</div>
+      <div class="item-price">$1.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Bell pepper.jpg" alt="Bell Peppers" />
+      <div class="item-name">Bell Peppers</div>
+      <div class="item-price">$2.99 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Egg plant.jpg" alt="Eggplants" />
+      <div class="item-name">Eggplants</div>
+      <div class="item-price">$2.50 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Beans.jpg" alt="Green Beans" />
+      <div class="item-name">Green Beans</div>
+      <div class="item-price">$1.75 / kg</div>
+      <div class="item-qty">
+        <input type="number" min="1" value="1" /> Qty
+      </div>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+      </a>
+    </div>
+
+    <div class="grocery-item">
+      <img src="califlower.jpg" alt="Cauliflower" />
+      <div class="item-name">Cauliflower</div>
+      <div class="item-price">$2.90 / kg</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+      </a>
+    </div>
+
+    <div class="grocery-item">
+      <img src="Mushroom.jpg" alt="Mushrooms" />
+      <div class="item-name">Mushrooms</div>
+      <div class="item-price">$4.50 / pack</div>
+      <div class="item-qty">
+        Qty: <input type="number" min="1" value="1" />
+      </div>
+       <a href="Cart.html">
+      <button>Add to Cart</button>
+      </a>
+    
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Findoe Pharmacy Products</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f7f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    .pharmacy-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .pharmacy-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .pharmacy-item:hover {
+      box-shadow: 0 8px 24px rgba(44, 62, 80, 0.2);
+      transform: translateY(-5px);
+    }
+    .pharmacy-item img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      background: #ecf0f1;
+      padding: 10px;
+    }
+    .item-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      min-height: 48px;
+      color: #34495e;
+    }
+    .item-desc {
+      font-size: 0.85rem;
+      color: #7f8c8d;
+      margin-bottom: 10px;
+      min-height: 36px;
+    }
+    .item-price {
+      color: #27ae60;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+    .quantity-label {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: #34495e;
+    }
+    .quantity-input {
+      width: 50px;
+      padding: 6px;
+      font-size: 1rem;
+      text-align: center;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      margin-left: 6px;
+    }
+    button {
+      background-color: #2980b9;
+      border: none;
+      color: white;
+      padding: 10px 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1e6091;
+    }
+    @media (max-width: 480px) {
+      .pharmacy-item img {
+        width: 110px;
+        height: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Findoe Pharmacy Products</h1>
+  <div class="pharmacy-container">
+    <!-- Pharmacy items (35+) -->
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Vitamin+C" alt="Vitamin C" />
+      <div class="item-name">Vitamin C Tablets</div>
+      <div class="item-desc">Immune support supplement</div>
+      <div class="item-price">$12.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Pain+Relief" alt="Pain Relief" />
+      <div class="item-name">Pain Relief Capsules</div>
+      <div class="item-desc">Fast action for muscle pain</div>
+      <div class="item-price">$9.99</div>
+      <label class="quantity-label">Qty: 
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Cold+Syrup" alt="Cold Syrup" />
+      <div class="item-name">Cold & Flu Syrup</div>
+      <div class="item-desc">Relieves cold symptoms</div>
+      <div class="item-price">$14.49</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a>  
+    </div>
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Antacid" alt="Antacid" />
+      <div class="item-name">Antacid Tablets</div>
+      <div class="item-desc">For acid reflux relief</div>
+      <div class="item-price">$8.79</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>  
+      <a href="Cart.html">        
+      <button>Add to Cart</button>
+    </a>  
+    </div>
+    <div class="pharmacy-item">
+      <img src="eye.jpg" alt="Eye Drops" />
+      <div class="item-name">Anti-allergy Eye Drops</div>
+      <div class="item-desc">Soothes redness & irritation</div>
+      <div class="item-price">$11.50</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>  
+      <a href="Cart.html">    
+      <button>Add to Cart</button>
+    </a>     
+    </div>
+    <div class="pharmacy-item">
+      <img src="pain.jpg" alt="Pain Ointment" />
+      <div class="item-name">Pain Relief Ointment</div>
+      <div class="item-desc">For joint & muscle pain</div>
+      <div class="item-price">$13.99</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>   
+      <a href="Cart.html">      
+      <button>Add to Cart</button>
+    </a>   
+    </div>
+    <div class="pharmacy-item">
+      <img src="cough.jpg" alt="Cough Syrup" />
+      <div class="item-name">Cough Syrup</div>
+      <div class="item-desc">Relieves cough & throat irritation</div>
+      <div class="item-price">$10.99</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>  
+      <a href="Cart.html">   
+      <button>Add to Cart</button>
+    </a>  
+    </div>
+    <div class="pharmacy-item">
+      <img src="anta.jpg" alt="Multivitamins" />
+      <div class="item-name">Multivitamin Capsules</div>
+      <div class="item-desc">Supports overall health</div>
+      <div class="item-price">$15.99</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    <div class="pharmacy-item">
+      <img src="bandage.jpg" alt="Bandages" />
+      <div class="item-name">Adhesive Bandages</div>
+      <div class="item-desc">Assorted sizes for cuts & wounds</div>
+      <div class="item-price">$5.99</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+   </div>
+    <div class="pharmacy-item">
+      <img src="therama.jpg" alt="Thermometer" />
+      <div class="item-name">Digital Thermometer</div>
+      <div class="item-desc">Fast temperature measurement</div>
+      <div class="item-price">$18.49</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    <!-- Add 25+ more items similarly -->
+    <div class="pharmacy-item">
+      <img src="san.jpg" alt="Hand Sanitizer" />
+      <div class="item-name">Hand Sanitizing Gel</div>
+      <div class="item-desc">Kills 99.9% germs & bacteria</div>
+      <div class="item-price">$7.29</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    <div class="pharmacy-item">
+      <img src="anta.jpg" alt="Antiseptic Cream" />
+      <div class="item-name">Antiseptic Cream</div>
+      <div class="item-desc">For cuts, scrapes & burns</div>
+      <div class="item-price">$9.89</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    <div class="pharmacy-item">
+      <img src="medecine.jpg" alt="Allergy Medicine" />
+      <div class="item-name">Allergy Relief Tablets</div>
+      <div class="item-desc">Reduces allergy symptoms</div>
+      <div class="item-price">$11.99</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Vitamin+D" alt="Vitamin D" />
+      <div class="item-name">Vitamin D3 Supplements</div>
+      <div class="item-desc">Supports bone & immune health</div>
+      <div class="item-price">$13.49</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=First+Aid+Kit" alt="First Aid Kit" />
+      <div class="item-name">Complete First Aid Kit</div>
+      <div class="item-desc">For emergencies & injuries</div>
+      <div class="item-price">$25.99</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a>
+    </div>
+    
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Blood+Pressure+Monitor" alt="Blood Pressure Monitor" />
+      <div class="item-name">Blood Pressure Monitor</div>
+      <div class="item-desc">Digital, easy to use</div>
+      <div class="item-price">$39.99</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a> 
+    </div>
+    
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Cold+Medicine" alt="Cold Medicine" />
+      <div class="item-name">Cold Medicine Syrup</div>
+      <div class="item-desc">Effective cold relief</div>
+      <div class="item-price">$12.49</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+        <button>Add to Cart</button>
+    </a>
+    </div>
+    
+    <div class="pharmacy-item">
+      <img src="https://via.placeholder.com/140?text=Digestive+Aid" alt="Digestive Aid" />
+      <div class="item-name">Digestive Aid Tablets</div>
+      <div class="item-desc">For stomach comfort</div>
+      <div class="item-price">$9.79</div>
+      <label class="quantity-label">Qty:
+        <input class="quantity-input" type="number" min="1" value="1" />
+      </label>
+      <a href="Cart.html">
+      <button>Add to Cart</button>
+    </a>
+    </div>
+
+    <!-- Add remaining items similarly up to 35 or more -->
+
+  </div>
+</body>
+</html>

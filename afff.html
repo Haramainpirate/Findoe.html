@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleFoot - Premium Footwear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #232f3e, #3a4a5e);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff9900;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ff9900;
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .product-section {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .product-image {
+            flex: 1;
+            max-width: 400px;
+            background: #f7f7f7;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            border-radius: 6px;
+            transition: transform 0.3s;
+        }
+        
+        .product-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        .product-details {
+            flex: 2;
+        }
+        
+        .product-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #232f3e;
+        }
+        
+        .product-price {
+            font-size: 24px;
+            color: #b12704;
+            margin-bottom: 20px;
+        }
+        
+        .product-description {
+            margin-bottom: 25px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .size-selector {
+            margin-bottom: 20px;
+        }
+        
+        .size-selector label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .size-options {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .size-option {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .size-option:hover, .size-option.selected {
+            background: #232f3e;
+            color: white;
+            border-color: #232f3e;
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .quantity-selector label {
+            margin-right: 15px;
+            font-weight: 600;
+        }
+        
+        .quantity-btn {
+            width: 36px;
+            height: 36px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .quantity-input {
+            width: 50px;
+            height: 36px;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin: 0 5px;
+        }
+        
+        .add-to-cart-btn {
+            background: #ff9900;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 15px;
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .add-to-cart-btn:hover {
+            background: #e88a00;
+        }
+        
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 50px auto;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            animation: modalFade 0.3s;
+        }
+        
+        @keyframes modalFade {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            color: #232f3e;
+        }
+        
+        .close-modal {
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .checkout-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #ff9900;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+        }
+        
+        .full-width {
+            grid-column: span 2;
+        }
+        
+        .checkout-summary {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .summary-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #232f3e;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .place-order-btn {
+            background: #ff9900;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 25px;
+            width: 100%;
+        }
+        
+        .place-order-btn:hover {
+            background: #e88a00;
+        }
+        
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+            }
+            
+            .product-image {
+                max-width: 100%;
+            }
+            
+            .checkout-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .full-width {
+                grid-column: span 1;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shoe-prints"></i>
+                    StyleFoot
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="product-section">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/400x400/f0f0f0/969696?text=Premium+Sneakers" alt="Premium Sneakers">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">UrbanRunner Premium Sneakers</h1>
+                <div class="product-price">$129.99</div>
+                <div class="product-rating">
+                    <i class="fas fa-star" style="color: #ff9900;"></i>
+                    <i class="fas fa-star" style="color: #ff9900;"></i>
+                    <i class="fas fa-star" style="color: #ff9900;"></i>
+                    <i class="fas fa-star" style="color: #ff9900;"></i>
+                    <i class="fas fa-star-half-alt" style="color: #ff9900;"></i>
+                    <span>1,243 ratings</span>
+                </div>
+                <p class="product-description">
+                    Experience ultimate comfort and style with our UrbanRunner Premium Sneakers. Designed for both athletic performance and casual wear, these sneakers feature advanced cushioning technology, breathable mesh upper, and a durable rubber sole.
+                    <br><br>
+                    Available in multiple sizes and colors. Perfect for running, gym workouts, or everyday casual wear.
+                </p>
+                
+                <div class="size-selector">
+                    <label>Select Size:</label>
+                    <div class="size-options">
+                        <div class="size-option">7</div>
+                        <div class="size-option">8</div>
+                        <div class="size-option selected">9</div>
+                        <div class="size-option">10</div>
+                        <div class="size-option">11</div>
+                    </div>
+                </div>
+                
+                <div class="quantity-selector">
+                    <label>Quantity:</label>
+                    <div class="quantity-controls">
+                        <div class="quantity-btn" id="decrease-qty">-</div>
+                        <input type="text" class="quantity-input" id="quantity" value="1">
+                        <div class="quantity-btn" id="increase-qty">+</div>
+                    </div>
+                </div>
+                
+                <button class="add-to-cart-btn" id="add-to-cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Checkout</h2>
+                <span class="close-modal" id="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="checkout-form">
+                    <div class="full-width">
+                        <h3>Shipping Address</h3>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="street">Street Address</label>
+                        <input type="text" id="street" placeholder="Enter your street address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="area">Area/Locality</label>
+                        <input type="text" id="area" placeholder="Enter your area" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Enter your city" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="state">State/Province</label>
+                        <input type="text" id="state" placeholder="Enter your state" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zip">ZIP/Postal Code</label>
+                        <input type="text" id="zip" placeholder="Enter your ZIP code" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" required>
+                            <option value="">Select your country</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>United Kingdom</option>
+                            <option>Australia</option>
+                            <option>Germany</option>
+                        </select>
+                    </div>
+                    
+                    <div class="full-width">
+                        <h3>Payment Method</h3>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="cardnumber">Credit Card Number</label>
+                        <input type="text" id="cardnumber" placeholder="Enter your card number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="expiry">Expiration Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="CVV" required>
+                    </div>
+                </form>
+                
+                <div class="checkout-summary">
+                    <h3 class="summary-title">Order Summary</h3>
+                    
+                    <div class="summary-item">
+                        <span>UrbanRunner Sneakers (Qty: <span id="summary-quantity">1</span>)</span>
+                        <span>$129.99</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Shipping & Handling:</span>
+                        <span>$5.99</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Estimated Tax:</span>
+                        <span>$10.40</span>
+                    </div>
+                    
+                    <div class="summary-item" style="font-weight: bold; font-size: 18px;">
+                        <span>Order Total:</span>
+                        <span id="order-total">$146.38</span>
+                    </div>
+                </div>
+                
+                <button class="place-order-btn">Place Your Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const addToCartBtn = document.getElementById('add-to-cart');
+            const checkoutModal = document.getElementById('checkout-modal');
+            const closeModal = document.getElementById('close-modal');
+            const cartCount = document.getElementById('cart-count');
+            const increaseQty = document.getElementById('increase-qty');
+            const decreaseQty = document.getElementById('decrease-qty');
+            const quantityInput = document.getElementById('quantity');
+            const sizeOptions = document.querySelectorAll('.size-option');
+            const summaryQuantity = document.getElementById('summary-quantity');
+            const orderTotal = document.getElementById('order-total');
+            
+            // Variables
+            let currentQuantity = 1;
+            let cartItems = 0;
+            const productPrice = 129.99;
+            const shipping = 5.99;
+            
+            // Size selection
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    sizeOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Quantity controls
+            increaseQty.addEventListener('click', function() {
+                currentQuantity++;
+                quantityInput.value = currentQuantity;
+                updateOrderSummary();
+            });
+            
+            decreaseQty.addEventListener('click', function() {
+                if (currentQuantity > 1) {
+                    currentQuantity--;
+                    quantityInput.value = currentQuantity;
+                    updateOrderSummary();
+                }
+            });
+            
+            quantityInput.addEventListener('change', function() {
+                currentQuantity = parseInt(this.value) || 1;
+                if (currentQuantity < 1) currentQuantity = 1;
+                this.value = currentQuantity;
+                updateOrderSummary();
+            });
+            
+            // Add to cart button
+            addToCartBtn.addEventListener('click', function() {
+                cartItems += currentQuantity;
+                cartCount.textContent = cartItems;
+                
+                // Show checkout modal
+                checkoutModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                checkoutModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close modal if clicked outside
+            window.addEventListener('click', function(event) {
+                if (event.target === checkoutModal) {
+                    checkoutModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Update order summary
+            function updateOrderSummary() {
+                const taxRate = 0.08;
+                const subtotal = productPrice * currentQuantity;
+                const tax = subtotal * taxRate;
+                const total = subtotal + shipping + tax;
+                
+                summaryQuantity.textContent = currentQuantity;
+                orderTotal.textContent = $${total.toFixed(2)};
+            }
+            
+            // Form submission
+            const placeOrderBtn = document.querySelector('.place-order-btn');
+            placeOrderBtn.addEventListener('click', function() {
+                alert('Order successfully placed! Thank you for your purchase.');
+                checkoutModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                
+                // Reset cart
+                cartItems = 0;
+                cartCount.textContent = '0';
+                currentQuantity = 1;
+                quantityInput.value = '1';
+                updateOrderSummary();
+            });
+            
+            // Initialize order summary
+            updateOrderSummary();
+        });
+    </script>
+</body>
+</html>

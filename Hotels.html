@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Areas Listing</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 20px;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #566874;
+    }
+    .area-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .area-item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(44, 62, 80, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+    }
+    .area-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(44, 62, 80, 0.15);
+    }
+    .area-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 4px solid #2c3e50;
+    }
+    .area-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 18px 10px 8px;
+      color: #2c3e50;
+      flex-grow: 1;
+    }
+    .area-description {
+      font-size: 0.95rem;
+      color: #566874;
+      margin: 0 15px 20px;
+      min-height: 48px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Popular Hotel Areas</h1>
+  <p class="subtitle">Discover the best neighborhoods to stay in</p>
+</header>
+
+<ul class="area-list">
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Downtown" alt="Downtown" class="area-img" />
+    <div class="area-name">Downtown</div>
+    <div class="area-description">Heart of the city with bustling shops and nightlife.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Beachfront" alt="Beachfront" class="area-img" />
+    <div class="area-name">Beachfront</div>
+    <div class="area-description">Scenic coastline with relaxing beach resorts.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Historic+District" alt="Historic District" class="area-img" />
+    <div class="area-name">Historic District</div>
+    <div class="area-description">Charming area with heritage buildings and museums.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Uptown" alt="Uptown" class="area-img" />
+    <div class="area-name">Uptown</div>
+    <div class="area-description">Trendy neighborhood with boutiques and cafes.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Airport+Area" alt="Airport Area" class="area-img" />
+    <div class="area-name">Airport Area</div>
+    <div class="area-description">Convenient hotels close to the airport terminals.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Financial+District" alt="Financial District" class="area-img" />
+    <div class="area-name">Financial District</div>
+    <div class="area-description">Central business hub with upscale hotels.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Old+Town" alt="Old Town" class="area-img" />
+    <div class="area-name">Old Town</div>
+    <div class="area-description">Historic quarter with cobblestone streets and charm.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Suburbs" alt="Suburbs" class="area-img" />
+    <div class="area-name">Suburbs</div>
+    <div class="area-description">Peaceful residential areas with family-friendly hotels.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Mountain+Region" alt="Mountain Region" class="area-img" />
+    <div class="area-name">Mountain Region</div>
+    <div class="area-description">Scenic views with cozy mountain lodges.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Shopping+District" alt="Shopping District" class="area-img" />
+    <div class="area-name">Shopping District</div>
+    <div class="area-description">Close to major shopping centers and malls.</div>
+  </li>
+
+  <!-- Continue adding 25+ more areas similarly -->
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Riverfront" alt="Riverfront" class="area-img" />
+    <div class="area-name">Riverfront</div>
+    <div class="area-description">Beautiful riverside hotels with scenic views.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Arts+District" alt="Arts District" class="area-img" />
+    <div class="area-name">Arts District</div>
+    <div class="area-description">Vibrant area known for galleries and street art.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Casino+Area" alt="Casino Area" class="area-img" />
+    <div class="area-name">Casino Area</div>
+    <div class="area-description">Hotels near casinos and entertainment venues.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=University+Area" alt="University Area" class="area-img" />
+    <div class="area-name">University Area</div>
+    <div class="area-description">Affordable stay options near major universities.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Convention+Center" alt="Convention Center" class="area-img" />
+    <div class="area-name">Convention Center</div>
+    <div class="area-description">Business hotels near conference and convention centers.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Garden+District" alt="Garden District" class="area-img" />
+    <div class="area-name">Garden District</div>
+    <div class="area-description">Lush greenery and quiet upscale neighborhoods.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Harbor+Area" alt="Harbor Area" class="area-img" />
+    <div class="area-name">Harbor Area</div>
+    <div class="area-description">Waterfront hotels close to marinas and boat tours.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Industrial+Area" alt="Industrial Area" class="area-img" />
+    <div class="area-name">Industrial Area</div>
+    <div class="area-description">Business-oriented hotels near industrial zones.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Historic+Suburb" alt="Historic Suburb" class="area-img" />
+    <div class="area-name">Historic Suburb</div>
+    <div class="area-description">Residential area with historic architecture.</div>
+  </li>
+  <li class="area-item">
+    <img src="https://via.placeholder.com/240x160?text=Countryside" alt="Countryside" class="area-img" />
+    <div class="area-name">Countryside</div>
+    <div class="area-description">Peaceful rural hotels with scenic landscapes.</div>
+  </li>
+
+  <!-- Add remaining items similarly for 35+ total -->
+
+</ul>
+
+</body>
+</html>

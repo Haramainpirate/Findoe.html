@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Findoe | Market Service Hub</title>
+  <meta name="description" content="Findoe: One place for every shop & market need!"/>
+  <link rel="stylesheet" href="styles1.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo"><span>Findoe</span></div>
+    <nav>
+      <ul>
+        <li><a href="https://www.amazon.in/">Shops</a></li>
+        <li><a href="#location">Your Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Welcome to Findoe Market!</h1>
+      <p>Discover and connect with every type of local shop in one place.</p>
+    </section>
+    <section id="shops">
+      <h2>All Shop Types</h2>
+      <div class="shop-grid">
+        <img src="Grocery.jpg">
+        <div class="shop-card grocery">Grocery</div>
+        <div class="shop-card electronics">Electronics</div>
+        <div class="shop-card clothing">Clothing</div>
+        <div class="shop-card pharmacy">Pharmacy</div>
+        <div class="shop-card books">Bookstore</div>
+        <div class="shop-card salon">Salon</div>
+        <div class="shop-card hardware">Hardware</div>
+        <div class="shop-card bakery">Bakery</div>
+        <div class="shop-card hospital">Hospital</div>
+        <div class="shop-card workshop">Workshop</div>
+        <!-- Add more shop types as needed -->
+      </div>
+    </section>
+    <section id="location">
+      <h2>Your Location</h2>
+      <div id="user-location">Detecting...</div>
+      <button onclick="getLocation()">Show My Location</button>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2025 Findoe Market Service | Erode, Tamil Nadu</p>
+    <p>Contact: info@findoe.com</p>
+  </footer>
+  <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fashion Items Catalog - 30 Items</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      margin: 20px;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2e2e2e;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #666;
+    }
+    .item-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .item-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid #333;
+    }
+    .item-details {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .item-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: #222;
+    }
+    .item-category {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .item-description {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 12px;
+      flex-grow: 1;
+    }
+    .item-price {
+      font-weight: 700;
+      color: #d63447;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Fashion Items Collection</h1>
+  <p class="subtitle">Stylish apparel and accessories for men and women</p>
+</header>
+
+<ul class="item-list">
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=300&q=80" alt="Men's Leather Jacket" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Leather Jacket</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Classic black leather jacket with zipper details.</div>
+      <div class="item-price">$120.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=300&q=80" alt="Women's Summer Dress" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Summer Dress</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Light and flowy floral dress perfect for warm weather.</div>
+      <div class="item-price">$69.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1618354692294-f2794742a1a3?auto=format&fit=crop&w=300&q=80" alt="Men's Sneakers" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Sneakers</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Comfortable casual sneakers with breathable fabric.</div>
+      <div class="item-price">$80.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=300&q=80" alt="Women's Handbag" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Handbag</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Stylish leather handbag with multiple compartments.</div>
+      <div class="item-price">$110.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=300&q=80" alt="Men's Denim Jeans" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Denim Jeans</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Classic slim-fit denim jeans with stretch.</div>
+      <div class="item-price">$55.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=300&q=80" alt="Women's Blouse" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Blouse</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Elegant chiffon blouse with lace details.</div>
+      <div class="item-price">$45.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1520974735119-c7119969e32a?auto=format&fit=crop&w=300&q=80" alt="Men's Wristwatch" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Wristwatch</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Classic analog wristwatch with leather strap.</div>
+      <div class="item-price">$150.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1533777324565-a04df0e527b7?auto=format&fit=crop&w=300&q=80" alt="Women's Sunglasses" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Sunglasses</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">UV protection with stylish oversized frames.</div>
+      <div class="item-price">$75.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=300&q=80" alt="Men's T-Shirt" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's T-Shirt</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Soft cotton t-shirt in multiple colors.</div>
+      <div class="item-price">$25.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1555529669-70d89be808dd?auto=format&fit=crop&w=300&q=80" alt="Women's Jeans" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Jeans</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Stretch denim jeans with slim fit.</div>
+      <div class="item-price">$60.00</div>
+    </div>
+  </li>
+
+  <!-- More items up to 30, similarly structured -->
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=300&q=80" alt="Men's Formal Shirt" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Formal Shirt</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Crisp white formal shirt for office wear.</div>
+      <div class="item-price">$40.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1520974734925-a1f7039208aa?auto=format&fit=crop&w=300&q=80" alt="Women's Maxi Dress" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Maxi Dress</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Flowy maxi dress suitable for casual and events.</div>
+      <div class="item-price">$85.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1562158070-e03e2256b885?auto=format&fit=crop&w=300&q=80" alt="Men's Chinos" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Chinos</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Comfortable slim fit chinos for casual occasions.</div>
+      <div class="item-price">$50.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1520974191903-6345eef7792a?auto=format&fit=crop&w=300&q=80" alt="Women's Cardigan" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Cardigan</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Cozy knit cardigan in pastel colors.</div>
+      <div class="item-price">$55.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1503342452485-d7f4eb7cf92e?auto=format&fit=crop&w=300&q=80" alt="Men's Boots" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Boots</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Rugged leather boots perfect for outdoor.</div>
+      <div class="item-price">$130.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1520974191730-0cbb1a2ae19f?auto=format&fit=crop&w=300&q=80" alt="Women's Heels" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Heels</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Elegant high heels for special occasions.</div>
+      <div class="item-price">$90.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=300&q=80" alt="Men's Sweater" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Men's Sweater</div>
+      <div class="item-category">Men</div>
+      <div class="item-description">Warm knitted sweater for winter wear.</div>
+      <div class="item-price">$60.00</div>
+    </div>
+  </li>
+
+  <li class="item">
+    <img src="https://images.unsplash.com/photo-1495121605193-b116b5b09a59?auto=format&fit=crop&w=300&q=80" alt="Women's Scarf" class="item-img" />
+    <div class="item-details">
+      <div class="item-name">Women's Scarf</div>
+      <div class="item-category">Women</div>
+      <div class="item-description">Soft wool scarf in neutral tones.</div>
+      <div class="item-price">$25.00</div>
+    </div>
+  </li>
+
+</ul>
+
+</body>
+</html>

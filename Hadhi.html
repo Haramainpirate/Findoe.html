@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Findoe Supermarket - Royal Theme</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f8f6fb, #eae6f3 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      color: #3c226e;
+    }
+    header {
+      background: linear-gradient(90deg, #663399 0%, #cc99ff 100%);
+      color: white;
+      text-align: center;
+      padding: 35px 0 25px 0;
+      box-shadow: 0 4px 12px rgba(102,51,153,0.07);
+    }
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 12px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #fff176;
+    }
+    .category-section {
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+      padding: 0 22px;
+    }
+    .category-title {
+      text-align: left;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #433594;
+      background: linear-gradient(90deg, #efb2a1, #cc99ff 70%, #fff176 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .category-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+    }
+    .category-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(102,51,153,0.08);
+      padding: 16px 15px 25px 15px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+      border: 2px solid #f3e8ff;
+    }
+    .category-card:hover {
+      box-shadow: 0 14px 40px rgba(102,51,153,0.16);
+      border-color: #d1c4e9;
+    }
+    .category-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 15px auto;
+      box-shadow: 0 2px 9px rgba(102,51,153,0.08);
+    }
+    .category-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #4e378b;
+    }
+    .category-desc {
+      font-size: 0.92rem;
+      color: #7a65b0;
+      margin-bottom: 12px;
+    }
+    .product-list {
+      display: flex;
+      gap: 13px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .product-card {
+      background: #f8f6fb;
+      border: 1px solid #e8e0fa;
+      border-radius: 8px;
+      width: 130px;
+      padding: 8px 7px 10px 7px;
+      box-shadow: 0 2px 8px rgba(102,51,153,0.05);
+    }
+    .product-img {
+      width: 58px;
+      height: 58px;
+      object-fit: cover;
+      border-radius: 9px;
+      margin-bottom: 7px;
+    }
+    .product-name {
+      font-size: 0.93rem;
+      color: #433594;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .product-price {
+      font-size: 0.87rem;
+      color: #a86bdf;
+      font-weight: 700;
+    }
+    @media (max-width:600px) {
+      .category-title { font-size: 1.3rem; }
+      .category-list { grid-template-columns: 1fr; }
+      .category-section { padding: 0 8px; }
+      header { padding: 22px 0 18px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Findoe Supermarket</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Categories</a>
+      <a href="#">Offers</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="category-section">
+      <div class="category-title">Our Royal Supermarket Categories</div>
+      <div class="category-list">
+        <!-- Fruits & Vegetables -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1464306076886-2550b7d58ccb?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Fruits & Vegetables" />
+          <div class="category-label">Fruits & Vegetables</div>
+          <div class="category-desc">Fresh organic produce for a healthy life.</div>
+          <div class="product-list">
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Apples" />
+              <div class="product-name">Apples</div>
+              <div class="product-price">₹80/kg</div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1519864600268-1ab4500c35ce?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Carrots" />
+              <div class="product-name">Carrots</div>
+              <div class="product-price">₹50/kg</div>
+            </div>
+          </div>
+        </div>
+        <!-- Dairy & Eggs -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1547483238-456e4aa285a3?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Dairy & Eggs" />
+          <div class="category-label">Dairy & Eggs</div>
+          <div class="category-desc">Premium milk, cheese, and farm eggs.</div>
+          <div class="product-list">
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1519864935563-efd3d1a32396?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Milk" />
+              <div class="product-name">Milk</div>
+              <div class="product-price">₹60/litre</div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Eggs" />
+              <div class="product-name">Eggs</div>
+              <div class="product-price">₹65/doz</div>
+            </div>
+          </div>
+        </div>
+        <!-- Breads & Bakery -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1519864600268-1ab4500c35ce?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Bakery" />
+          <div class="category-label">Breads & Bakery</div>
+          <div class="category-desc">Freshly baked breads and sweet treats.</div>
+          <div class="product-list">
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1606788075761-610dc974c814?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Whole Wheat Bread" />
+              <div class="product-name">Whole Wheat Bread</div>
+              <div class="product-price">₹40/loaf</div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1519864920374-7fbb9c80fe76?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Croissant" />
+              <div class="product-name">Croissant</div>
+              <div class="product-price">₹30/pc</div>
+            </div>
+          </div>
+        </div>
+        <!-- Snacks & Beverages -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Snacks & Beverages" />
+          <div class="category-label">Snacks & Beverages</div>
+          <div class="category-desc">Royal snacks and refreshing drinks.</div>
+          <div class="product-list">
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Potato Chips" />
+              <div class="product-name">Potato Chips</div>
+              <div class="product-price">₹25/pack</div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Juice" />
+              <div class="product-name">Orange Juice</div>
+              <div class="product-price">₹75/litre</div>
+            </div>
+          </div>
+        </div>
+        <!-- Meats & Seafood -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1464306076886-2550b7d58ccb?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Meats & Seafood" />
+          <div class="category-label">Meats & Seafood</div>
+          <div class="category-desc">Premium cuts, fresh catch seafood.</div>
+          <div class="product-list">
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Chicken Breast" />
+              <div class="product-name">Chicken Breast</div>
+              <div class="product-price">₹185/kg</div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1519864600268-1ab4500c35ce?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Fish Fillet" />
+              <div class="product-name">Fish Fillet</div>
+              <div class="product-price">₹220/kg</div>
+            </div>
+          </div>
+        </div>
+        <!-- Household Supplies -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1464306076886-2550b7d58ccb?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Household Supplies" />
+          <div class="category-label">Household Supplies</div>
+          <div class="category-desc">Essential home care for every palace.</div>
+          <div class="product-list">
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Detergent" />
+              <div class="product-name">Detergent</div>
+              <div class="product-price">₹120/pack</div>
+            </div>
+            <div class="product-card">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" class="product-img" alt="Floor Cleaner" />
+              <div class="product-name">Floor Cleaner</div>
+              <div class="product-price">₹95/bottle</div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more categories as needed -->
+      </div>
+    </section>
+  </main>
+</body>
+</html>

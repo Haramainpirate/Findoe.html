@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hardware Products Listing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .product-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .product-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .product-img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    .product-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      text-align: center;
+      color: #34495e;
+    }
+    .product-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .product-price {
+      font-size: 1rem;
+      color: #27ae60;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hardware Products</h1>
+  <p>Explore our wide range of hardware tools and accessories</p>
+</header>
+
+<ul class="product-list">
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Hammer" alt="Hammer" class="product-img" />
+    <div class="product-name">Hammer</div>
+    <div class="product-description">Durable steel claw hammer with ergonomic handle.</div>
+    <div class="product-price">$15.99</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Screwdriver+Set" alt="Screwdriver Set" class="product-img" />
+    <div class="product-name">Screwdriver Set</div>
+    <div class="product-description">Precision set with flathead and Phillips screwdrivers.</div>
+    <div class="product-price">$22.50</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Drill+Machine" alt="Drill Machine" class="product-img" />
+    <div class="product-name">Drill Machine</div>
+    <div class="product-description">Cordless electric drill with lithium-ion battery.</div>
+    <div class="product-price">$89.00</div>
+  </li>
+  <!-- Additional 22+ items repeating product-item structure -->
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Measuring+Tape" alt="Measuring Tape" class="product-img" />
+    <div class="product-name">Measuring Tape</div>
+    <div class="product-description">25 ft retractable measuring tape with locking mechanism.</div>
+    <div class="product-price">$8.75</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Wrench+Set" alt="Wrench Set" class="product-img" />
+    <div class="product-name">Wrench Set</div>
+    <div class="product-description">Set of 6 adjustable wrenches in various sizes.</div>
+    <div class="product-price">$34.99</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Utility+Knife" alt="Utility Knife" class="product-img" />
+    <div class="product-name">Utility Knife</div>
+    <div class="product-description">Heavy-duty retractable blade knife for cutting tasks.</div>
+    <div class="product-price">$12.20</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Safety+Gloves" alt="Safety Gloves" class="product-img" />
+    <div class="product-name">Safety Gloves</div>
+    <div class="product-description">Protective gloves for industrial and construction use.</div>
+    <div class="product-price">$9.99</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Level+Tool" alt="Level Tool" class="product-img" />
+    <div class="product-name">Level Tool</div>
+    <div class="product-description">24-inch spirit level for precise measurements.</div>
+    <div class="product-price">$14.49</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/150?text=Chisel+Set" alt="Chisel Set" class="product-img" />
+    <div class="product-name">Chisel Set</div>
+    <div class="product-description">Woodworking chisels for detailed carving and shaping.</div>
+    <div class="product-price">$27.00</div>
+  </li>
+  <!-- Extend with at least 15 more items similarly -->
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bakery Products Listing</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 20px;
+      color: #4b3b2b;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #bf6e3c;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #7d5a37;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .product-item {
+      background: #fff1e6;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(191, 110, 60, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .product-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(191, 110, 60, 0.25);
+    }
+    .product-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 3px solid #bf6e3c;
+    }
+    .product-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 15px 10px 5px;
+      color: #a75a1d;
+    }
+    .product-description {
+      font-size: 0.9rem;
+      color: #866746;
+      margin: 0 15px 12px;
+      min-height: 48px;
+    }
+    .product-price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #bf6e3c;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Our Delicious Bakery Items</h1>
+  <p class="subtitle">Freshly baked, mouth-watering treats just for you</p>
+</header>
+
+<ul class="product-list">
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Chocolate+Cake" alt="Chocolate Cake" class="product-img" />
+    <div class="product-name">Chocolate Cake</div>
+    <div class="product-description">Rich and moist chocolate layered cake.</div>
+    <div class="product-price">$25.00</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Blueberry+Muffin" alt="Blueberry Muffin" class="product-img" />
+    <div class="product-name">Blueberry Muffin</div>
+    <div class="product-description">Soft muffin bursting with fresh blueberries.</div>
+    <div class="product-price">$3.50</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Croissant" alt="Croissant" class="product-img" />
+    <div class="product-name">Butter Croissant</div>
+    <div class="product-description">Flaky, buttery French pastry.</div>
+    <div class="product-price">$2.75</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Cinnamon+Roll" alt="Cinnamon Roll" class="product-img" />
+    <div class="product-name">Cinnamon Roll</div>
+    <div class="product-description">Sweet roll with cinnamon sugar and icing.</div>
+    <div class="product-price">$3.95</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Apple+Pie" alt="Apple Pie" class="product-img" />
+    <div class="product-name">Apple Pie</div>
+    <div class="product-description">Classic apple pie with a flaky crust.</div>
+    <div class="product-price">$19.00</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Red+Velvet+Cake" alt="Red Velvet Cake" class="product-img" />
+    <div class="product-name">Red Velvet Cake</div>
+    <div class="product-description">Velvety cake with cream cheese frosting.</div>
+    <div class="product-price">$27.00</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Banana+Bread" alt="Banana Bread" class="product-img" />
+    <div class="product-name">Banana Bread</div>
+    <div class="product-description">Moist bread with ripe bananas and nuts.</div>
+    <div class="product-price">$7.50</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Eclair" alt="Eclair" class="product-img" />
+    <div class="product-name">Eclair</div>
+    <div class="product-description">Pastry filled with vanilla cream and chocolate glaze.</div>
+    <div class="product-price">$4.20</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Cheesecake" alt="Cheesecake" class="product-img" />
+    <div class="product-name">Cheesecake</div>
+    <div class="product-description">Creamy cheesecake with graham cracker crust.</div>
+    <div class="product-price">$23.00</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Bagel" alt="Bagel" class="product-img" />
+    <div class="product-name">Everything Bagel</div>
+    <div class="product-description">Traditional bagel with sesame and poppy seeds.</div>
+    <div class="product-price">$2.50</div>
+  </li>
+
+  <!-- Continue adding bakery items up to 35+ -->
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Macaron" alt="Macaron" class="product-img" />
+    <div class="product-name">Macaron</div>
+    <div class="product-description">Colorful almond cookies with creamy filling.</div>
+    <div class="product-price">$3.00</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Donut" alt="Donut" class="product-img" />
+    <div class="product-name">Glazed Donut</div>
+    <div class="product-description">Soft fried dough topped with sweet glaze.</div>
+    <div class="product-price">$1.50</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Chocolate+Chip+Cookie" alt="Chocolate Chip Cookie" class="product-img" />
+    <div class="product-name">Chocolate Chip Cookie</div>
+    <div class="product-description">Classic cookie loaded with chocolate chips.</div>
+    <div class="product-price">$1.75</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Pecan+Pie" alt="Pecan Pie" class="product-img" />
+    <div class="product-name">Pecan Pie</div>
+    <div class="product-description">Rich pie with caramelized pecans.</div>
+    <div class="product-price">$21.50</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Fruit+Tart" alt="Fruit Tart" class="product-img" />
+    <div class="product-name">Fruit Tart</div>
+    <div class="product-description">Buttery tart filled with pastry cream and fresh fruit.</div>
+    <div class="product-price">$18.00</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Cupcake" alt="Cupcake" class="product-img" />
+    <div class="product-name">Vanilla Cupcake</div>
+    <div class="product-description">Moist cupcake topped with vanilla buttercream.</div>
+    <div class="product-price">$3.25</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Baklava" alt="Baklava" class="product-img" />
+    <div class="product-name">Baklava</div>
+    <div class="product-description">Sweet layered pastry with nuts and honey syrup.</div>
+    <div class="product-price">$5.50</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Raspberry+Scone" alt="Raspberry Scone" class="product-img" />
+    <div class="product-name">Raspberry Scone</div>
+    <div class="product-description">Fluffy scone with fresh raspberries.</div>
+    <div class="product-price">$4.75</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Lemon+Bar" alt="Lemon Bar" class="product-img" />
+    <div class="product-name">Lemon Bar</div>
+    <div class="product-description">Tangy lemon bar with shortbread crust.</div>
+    <div class="product-price">$3.75</div>
+  </li>
+  <li class="product-item">
+    <img src="https://via.placeholder.com/250x160?text=Cheese+Danish" alt="Cheese Danish" class="product-img" />
+    <div class="product-name">Cheese Danish</div>
+    <div class="product-description">Flaky pastry filled with sweet cream cheese.</div>
+    <div class="product-price">$3.85</div>
+  </li>
+  
+  <!-- Add remaining items similarly to cover 35+ items -->
+
+</ul>
+
+</body>
+</html>

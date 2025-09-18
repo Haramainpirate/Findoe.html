@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bookshop Catalog</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #2c3e50;
+      font-weight: 700;
+    }
+    p.subtitle {
+      font-size: 1.25rem;
+      color: #555;
+    }
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .book-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(44, 62, 80, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: default;
+      transition: box-shadow 0.3s ease;
+    }
+    .book-item:hover {
+      box-shadow: 0 8px 18px rgba(44, 62, 80, 0.2);
+    }
+    .book-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .book-details {
+      padding: 12px 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .book-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 6px;
+      flex-grow: 1;
+    }
+    .book-author {
+      font-size: 0.85rem;
+      color: #7a7a7a;
+      margin-bottom: 8px;
+    }
+    .book-price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bookshop Catalog</h1>
+  <p class="subtitle">Explore our collection of over 35 books</p>
+</header>
+
+<ul class="book-list">
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+1" alt="Book Title 1" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Great Gatsby</div>
+      <div class="book-author">by F. Scott Fitzgerald</div>
+      <div class="book-price">$10.99</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+2" alt="Book Title 2" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">1984</div>
+      <div class="book-author">by George Orwell</div>
+      <div class="book-price">$9.99</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+3" alt="Book Title 3" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">To Kill a Mockingbird</div>
+      <div class="book-author">by Harper Lee</div>
+      <div class="book-price">$12.50</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+4" alt="Book Title 4" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Pride and Prejudice</div>
+      <div class="book-author">by Jane Austen</div>
+      <div class="book-price">$11.20</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+5" alt="Book Title 5" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Catcher in the Rye</div>
+      <div class="book-author">by J.D. Salinger</div>
+      <div class="book-price">$13.00</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+6" alt="Book Title 6" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Moby Dick</div>
+      <div class="book-author">by Herman Melville</div>
+      <div class="book-price">$14.35</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+7" alt="Book Title 7" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">War and Peace</div>
+      <div class="book-author">by Leo Tolstoy</div>
+      <div class="book-price">$19.99</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+8" alt="Book Title 8" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Hobbit</div>
+      <div class="book-author">by J.R.R. Tolkien</div>
+      <div class="book-price">$15.20</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+9" alt="Book Title 9" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Crime and Punishment</div>
+      <div class="book-author">by Fyodor Dostoevsky</div>
+      <div class="book-price">$17.00</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+10" alt="Book Title 10" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Brave New World</div>
+      <div class="book-author">by Aldous Huxley</div>
+      <div class="book-price">$11.75</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+11" alt="Book Title 11" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Odyssey</div>
+      <div class="book-author">by Homer</div>
+      <div class="book-price">$13.50</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+12" alt="Book Title 12" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Divine Comedy</div>
+      <div class="book-author">by Dante Alighieri</div>
+      <div class="book-price">$14.90</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+13" alt="Book Title 13" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Les Misérables</div>
+      <div class="book-author">by Victor Hugo</div>
+      <div class="book-price">$18.99</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+14" alt="Book Title 14" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Anna Karenina</div>
+      <div class="book-author">by Leo Tolstoy</div>
+      <div class="book-price">$15.20</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+15" alt="Book Title 15" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Brothers Karamazov</div>
+      <div class="book-author">by Fyodor Dostoevsky</div>
+      <div class="book-price">$16.50</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+16" alt="Book Title 16" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Don Quixote</div>
+      <div class="book-author">by Miguel de Cervantes</div>
+      <div class="book-price">$14.00</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+17" alt="Book Title 17" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">One Hundred Years of Solitude</div>
+      <div class="book-author">by Gabriel García Márquez</div>
+      <div class="book-price">$17.25</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+18" alt="Book Title 18" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Invisible Man</div>
+      <div class="book-author">by Ralph Ellison</div>
+      <div class="book-price">$13.75</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+19" alt="Book Title 19" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Grapes of Wrath</div>
+      <div class="book-author">by John Steinbeck</div>
+      <div class="book-price">$14.80</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+20" alt="Book Title 20" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Catch-22</div>
+      <div class="book-author">by Joseph Heller</div>
+      <div class="book-price">$12.50</div>
+    </div>
+  </li>
+
+  <!-- Add more book items similarly to exceed 35 items -->
+
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+21" alt="Book Title 21" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Wind-Up Bird Chronicle</div>
+      <div class="book-author">by Haruki Murakami</div>
+      <div class="book-price">$15.30</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+22" alt="Book Title 22" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Beloved</div>
+      <div class="book-author">by Toni Morrison</div>
+      <div class="book-price">$14.40</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+23" alt="Book Title 23" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Slaughterhouse-Five</div>
+      <div class="book-author">by Kurt Vonnegut</div>
+      <div class="book-price">$11.90</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+24" alt="Book Title 24" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Middlesex</div>
+      <div class="book-author">by Jeffrey Eugenides</div>
+      <div class="book-price">$16.10</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+25" alt="Book Title 25" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Life of Pi</div>
+      <div class="book-author">by Yann Martel</div>
+      <div class="book-price">$12.70</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+26" alt="Book Title 26" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Alchemist</div>
+      <div class="book-author">by Paulo Coelho</div>
+      <div class="book-price">$13.20</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+27" alt="Book Title 27" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Fahrenheit 451</div>
+      <div class="book-author">by Ray Bradbury</div>
+      <div class="book-price">$10.75</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+28" alt="Book Title 28" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Road</div>
+      <div class="book-author">by Cormac McCarthy</div>
+      <div class="book-price">$14.00</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+29" alt="Book Title 29" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Kite Runner</div>
+      <div class="book-author">by Khaled Hosseini</div>
+      <div class="book-price">$13.50</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+30" alt="Book Title 30" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Norwegian Wood</div>
+      <div class="book-author">by Haruki Murakami</div>
+      <div class="book-price">$12.80</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+31" alt="Book Title 31" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Handmaid's Tale</div>
+      <div class="book-author">by Margaret Atwood</div>
+      <div class="book-price">$14.30</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+32" alt="Book Title 32" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Gone with the Wind</div>
+      <div class="book-author">by Margaret Mitchell</div>
+      <div class="book-price">$15.00</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+33" alt="Book Title 33" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Chronicles of Narnia</div>
+      <div class="book-author">by C.S. Lewis</div>
+      <div class="book-price">$29.99</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+34" alt="Book Title 34" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Dracula</div>
+      <div class="book-author">by Bram Stoker</div>
+      <div class="book-price">$11.80</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+35" alt="Book Title 35" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">Frankenstein</div>
+      <div class="book-author">by Mary Shelley</div>
+      <div class="book-price">$12.40</div>
+    </div>
+  </li>
+  <li class="book-item">
+    <img src="https://via.placeholder.com/180x240?text=Book+36" alt="Book Title 36" class="book-img" />
+    <div class="book-details">
+      <div class="book-title">The Picture of Dorian Gray</div>
+      <div class="book-author">by Oscar Wilde</div>
+      <div class="book-price">$13.70</div>
+    </div>
+  </li>
+</ul>
+
+</body>
+</html>
